@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/iaaiNG/iaaiNG.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iaaiNG/iaaiNG.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iaaiNG/iaaiNG.github.io/issues"
+  },
+  "homepage": "https://github.com/iaaiNG/iaaiNG.github.io#readme"
+}
