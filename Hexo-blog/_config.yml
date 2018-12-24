@@ -4,11 +4,11 @@
 
 # Site
 title: iaaiNG的博客
-subtitle:
-description:
+subtitle: 死亡如风，常伴吾身！
+description: 
 keywords:
 author: iaaiNG
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -81,3 +81,10 @@ deploy:
   type: git
   repo: https://github.com/iaaiNG/iaaiNG.github.io.git
   branch: master
+
+#encoding: UTF-8
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
