@@ -69,3 +69,7 @@ npm i -S amfe-flexible
 ## 了解rem和em 
 - rem是基于html元素的字体大小来决定，而em则根据使用它的元素的大小决定
 - 使用 em 单位的唯一原因是缩放没有默认字体大小的元素，比如按钮，菜单和标题可能会有自己明确的字体大小。当你修改字体大小的时候，希望整个组件都适当缩放
+1	
+2	
+2、微信分享代码：https://cloud.tencent.com/developer/article/1120937
+3、jquery.touchSwipe.min
