@@ -1,7 +1,7 @@
 ---
 title: 关于Canvas的基础
 categories: 
-- 技术
+- 前端技术
 tags:
 - HTML5
 - Canvas

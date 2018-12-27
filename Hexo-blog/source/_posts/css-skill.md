@@ -1,6 +1,6 @@
 ---
 title: 关于CSS的技巧
-categories: 技术
+categories: 前端技术
 tags:
 - CSS
 ---

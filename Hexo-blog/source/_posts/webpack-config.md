@@ -1,6 +1,6 @@
 ---
 title: 关于webpack配置的理解
-category: 技术
+category: 前端技术
 tag: 
 - Webpack
 ---

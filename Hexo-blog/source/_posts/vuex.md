@@ -1,6 +1,6 @@
 ---
 title: 关于Vuex的应用
-categories: 技术
+categories: 前端技术
 tags:
 - Vue.js
 - Vuex

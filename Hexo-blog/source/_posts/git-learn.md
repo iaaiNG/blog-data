@@ -1,6 +1,6 @@
 ---
 title: 关于Git的使用
-categories: 技术
+categories: 管理工具
 tags:
 - Git
 ---
@@ -32,7 +32,7 @@ git config --list
 git add .
 git commit -m [message]
 ```
-#### or more simple
+or more simple
 ```
 git commit -am [message]  
 ```
