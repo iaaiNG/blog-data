@@ -141,7 +141,7 @@ social:
   #Skype: skype:yourname?call|chat || skype
 
 social_icons:
-  enable: true
+  enable: false
   icons_only: false
   transition: false
 
@@ -163,7 +163,7 @@ toc:
   enable: true
 
   # Automatically add list number to toc.
-  number: true
+  number: false
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
@@ -184,7 +184,7 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  display: hide
   #display: always
   #display: hide
   #display: remove
@@ -225,7 +225,7 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  updated_at: true
   categories: true
 
 # Post wordcount display settings
@@ -551,7 +551,7 @@ firestore:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: true
+  enable: false
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i> 访问人数
@@ -703,7 +703,7 @@ canvas_nest: false
 three_waves: false
 
 # canvas_lines
-canvas_lines: true
+canvas_lines: false
 
 # canvas_sphere
 canvas_sphere: false
@@ -816,20 +816,3 @@ version: 5.1.4
 
 # Fireworks
 fireworks: true
-
-live2d:
-  enable: true
-  scriptFrom: local
-  pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
-  tagMode: false
-  debug: false
-  model:
-    use: live2d-widget-model-haru
-  display:
-    position: right
-    width: 100
-    height: 200
-  mobile:
-    show: true

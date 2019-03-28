@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/iaaiNG/iaaiNG.github.io/issues"
   },
-  "homepage": "https://github.com/iaaiNG/iaaiNG.github.io#readme"
+  "homepage": "https://github.com/iaaiNG/iaaiNG.github.io#readme",
+  "dependencies": {}
 }
