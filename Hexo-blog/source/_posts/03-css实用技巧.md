@@ -8,13 +8,18 @@ tags:
 
 好记性不如烂笔头，能写下来的绝对不会记的<(￣︶￣)>，这里专门收录一些CSS常用的小技巧
 <!-- more -->
-# 文本溢出显示省略号
+# 一、文本溢出显示省略号
 ## 单行
 ```
 overflow:hidden;
 text-overflow:ellipsis;
 white-space:nowrap
 ```
+
+## ex: 
+<p style="width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">文本溢出显示省略号</p>
+
+
 ## 多行
 只有-webkit内核才有作用
 ```
@@ -24,16 +29,21 @@ display: -webkit-box;
 -webkit-line-clamp: 2;
 -webkit-box-orient: vertical;
 ```
-|属性|作用|
-|--|--|
-|-webkit-line-clamp  | 用来限制在一个块元素显示的文本的行数,这是一个不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中 |
-|  display: -webkit-box| 将对象作为弹性伸缩盒子模型显示  |
-|-webkit-box-orient  |设置或检索伸缩盒对象的子元素的排列方式 。| 
-|text-overflow: ellipsis| 以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本。|
+
+## ex:
+
+<p style="width:100px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">文本溢出显示省略号显示省略号</p>
+
+| 属性                    | 作用                                                                                                                  |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| -webkit-line-clamp      | 用来限制在一个块元素显示的文本的行数,这是一个不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中 |
+| display: -webkit-box    | 将对象作为弹性伸缩盒子模型显示                                                                                        |
+| -webkit-box-orient      | 设置或检索伸缩盒对象的子元素的排列方式 。                                                                             |
+| text-overflow: ellipsis | 以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本。                                                               |
 
 
 
-# 实现文字两端对齐
+# 二、实现文字两端对齐
 ## 写法一（缺点兼容性差）
 ```css
 div {
@@ -57,6 +67,34 @@ div:after {
     width: 100%;
 }
 ```
+
+# 三、利用 border 实现一个三角形
+## 原理
+```css
+width: 10px;
+height: 10px;
+border: 40px solid;
+border-color: orange blue red green;
+```
+每个 border 的边可以看作等边梯形
+<div style="width: 10px;
+height: 10px;
+border: 40px solid;
+border-color: orange blue red green;"></div>
+
+## 实现
+```css
+width: 0;
+height: 0;
+border: 40px solid;
+border-color: transparent transparent red;
+```
+当内容尺寸为 0 时，成立
+<div style="width: 0;
+height: 0;
+border: 40px solid;
+border-color: transparent red red transparent"></div>
+
 # CSS 移动端适配
 ## 利用手机淘宝，rem适配方案 https://github.com/amfe/lib-flexible
 安装
