@@ -4,7 +4,7 @@ date: 2019-06-20 23:31:17
 categories: 前端技术
 ---
 
-时隔快两月，终于想起写博客纪录，主要是996后没劲了，整里一些最近项目中使用 Vue 技巧的东西。
+时隔快两月，终于想起写博客纪录，整里一些最近项目中使用 Vue 技巧的东西。
 <!-- more -->
 
 
@@ -69,4 +69,45 @@ categories: 前端技术
 <base-checkbox v-model="lovingVue"></base-checkbox>
 ```
 这里的 lovingVue 的值将会传入这个名为 checked 的 prop。并且可以触发 change 事件更新 checked。
-# .sync 修饰符
+
+
+# 二、.sync 修饰符
+
+## (1) 原理
+```html
+<comp :foo.sync="bar"></comp>
+```
+会被扩展为：
+```html
+<comp :foo="bar" @update:foo="val => bar = val"></comp>
+```
+当子组件需要更新foo的值时，它需要显式地触发一个更新事件：
+```js
+this.$emit('update:foo', newValue)
+```
+
+## (2) 运用
+当子组件需要改变父组件的值的时候，结合 computed 的 get, set 设置，尤其有效。
+```html
+<child :data.sync="data"></child>
+```
+
+再 computed 定义 myData，便可以在子组件灵活使用 myData。
+```js
+// in child components
+<scritp>
+export default {
+  prop:['data'],
+  computed:{
+    myData:{
+      get(){
+        return this.data
+      },
+      set(val){
+        this.$emit('update:data', val)
+      }
+    }
+  }
+}
+</scritp>
+```
